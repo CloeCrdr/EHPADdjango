@@ -4,6 +4,7 @@ from django.views import View
 
 from django.core.mail import EmailMessage
 from .forms import ContactForm
+from .models import Contact, Service
 
 
 # Create your views here.
@@ -14,19 +15,22 @@ def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            name = form.cleaned_data['name']
+            form.save()
+            lastname = form.cleaned_data['lastname']
+            firstname = form.cleaned_data['firstname']
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
+            subject = form.cleaned_data['subject']
             
             # Envoi de l'e-mail
-            subject = 'Nouveau message de contact'
-            body = f'Nom: {name}\nAdresse e-mail: {email}\nMessage: {message}'
-            to_email = 'admin@example.com'  # Adresse e-mail de l'administrateur du site
+            subject = f'Nouveau message de contact: {subject}'
+            body = f'Nom: {lastname} {firstname}, \nAdresse e-mail: {email}\nMessage: {message}'
+            to_email = 'admin@ehpadexample.com'  # Adresse e-mail de l'administrateur du site
             email_message = EmailMessage(subject, body, to=[to_email])
             email_message.send()
             
             # Redirection vers une page de confirmation ou affichage d'un message de réussite
-            return render(request, 'contact/success.html')
+            return render(request, 'LiveApp/success.html')
     else:
         form = ContactForm()
     
@@ -36,4 +40,8 @@ def about(request):
     return render(request, 'LiveApp/about.html') 
 
 def services(request):
-    return render(request, 'LiveApp/services.html') 
+    services = Service.objects.all()
+    return render(request, 'LiveApp/services.html', {'services': services}) 
+
+def success(request):
+    return render(request, 'LiveApp/success.html') 
