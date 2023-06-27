@@ -1,25 +1,39 @@
-{% extends "LiveApp/base.html"%}
-{% block title %}EHPAD {% endblock %}
+{% extends "LiveApp/base.html" %}
+
+{% block title %}EHPAD{% endblock %}
 
 {% block content %}
-    <div class="container">
 
+<div class="container">
     <section id="section1">
-        <h2>Section 1</h2>
-        <p>Contenu de la section 1...</p>
+        <div class="cadre_info">
+            <h2>Qui sommes-nous ?</h2>
+            <p>Créée en 1465, notre association fait de votre bien-être notre priorité.</p>
+            <a>En savoir plus</a>
+        </div>
     </section>
+    <div class="sous-section">
+        <h2>Notre équipe, à votre écoute.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis eaque inventore reiciendis perferendis mollitia. Nostrum error delectus officiis, aspernatur illum voluptate sunt est, dignissimos, assumenda labore distinctio corporis iusto sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, molestiae reiciendis! Cupiditate minima maiores enim vero suscipit hic, quis voluptatibus nemo obcaecati exercitationem, similique ratione! Sequi consectetur illo ea. Distinctio.</p>
+    </div>
 
     <section id="section2">
-        <h2>Section 2</h2>
-        <p>Contenu de la secti     on 2...</p>/section>
-
-<section id="section3">
-    <h2>Section 3</h2>
-        <p>Contenu de la section 3...</p>
-        </section>
-    
-  <section id="section4">
-      <h2>Section 4</h2>
-        <p>Contenu de la se        n 4...</p>
+        <div class="titre">Des services innovants pour vos proches</div>
     </section>
+    <div class="sous-section">
+        <h2>Section 2</h2>
+        <p>Contenu de la section 2...</p>
+    </div>
+
+    <section id="section3">
+        <div class="titre">Une équipe à votre écoute en toutes circonstances</div>
+    </section>
+
+    <div class="sous-section">
+        <h2>Section 3</h2>
+        <p>Contenu de la section 3...</p>
+    </div>
+</div>
+
+
 {% endblock %}

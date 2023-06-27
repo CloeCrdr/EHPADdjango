@@ -8,4 +8,7 @@ app_name = 'LiveApp'
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('contact/', views.contact, name='contact'),
+    path('services/', views.services, name='services'),
+    path('a-propos/', views.about, name='about')
 ]
