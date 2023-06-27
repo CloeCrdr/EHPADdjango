@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    min-height: 83vh;
     background-color: #e0f0f8;
     background-attachment: fixed;
 }
@@ -73,7 +74,7 @@ section  p {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    filter: brightness(0.6);
+    filter: brightness(0.7);
     background-color: rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
@@ -92,17 +93,34 @@ section  p {
     background-image: url('../images/section3.jpg');
 }
 
+#section4 {
+    background-image: url('../images/section4.jpg'); 
+    background-position: center bottom;
+}
+
+#section5 {
+    background-image: url('../images/section5.jpg');
+    background-position: center top;
+    background-size: contain;
+}
+
+#section6 {
+    background-image: url('../images/section6.jpg');
+    background-position: center center;
+}
+
 .titre {
     font-size: 25px; 
     text-transform: uppercase;
     letter-spacing: 1px;
     color: white;
+    text-shadow: 1px 0px 2px grey;
     text-align: center;
 }
 
 .sous-section {
     width: 100%;
-    padding: 5rem;
+    padding: 3rem 5rem 4rem 5rem;
     position: relative;
     text-align: center;
 }
