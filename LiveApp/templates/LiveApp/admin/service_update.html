@@ -1,0 +1,17 @@
+{% extends "LiveApp/base.html" %}
+
+{% block title %}EHPAD - Modifier {{ service.name }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h3>Modifier un événement</h3>
+
+    <form method="post">
+      {% csrf_token %}
+      
+      {{ form.as_p }}
+      
+      <button type="submit">Modifier</button>
+    </form>
+</div>
+{% endblock %}

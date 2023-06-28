@@ -5,28 +5,8 @@
 {% block content %}
 
 <div class="container">
-<<<<<<< HEAD
-    <h3>Page Admin</h3>
-    <table>
-        <thead>
-            <tr>
-                <th>Nom</th><th>Description</th><th>Actif</th><th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for service in services %}
-            <tr>
-                <th>{{service.name}}</th>
-                <th>{{service.description}}</th>
-                <th>{{service.is_active}}</th>
-                <th><a>Editer</a>/<a href="{% url 'LiveApp:delete_service' service.id %}" >Supprimer</a>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-=======
     <h3>Gestion des services de l'EHPAD</h3>
-    <a href="" class="add">
+    <a href="{% url 'LiveApp:create_service' %}" class="add">
         <span class="material-symbols-rounded">
             add
         </span>
@@ -45,12 +25,12 @@
                 {{ service.name }}
             </div>
             <div class="management">
-                <a href="">
+                <a href="{% url 'LiveApp:update_service' service.id %}">
                     <span class="material-symbols-rounded update">
                         edit
                     </span>
                 </a>   
-                <a href="">
+                <a href="{% url 'LiveApp:delete_service' service.id %}">
                     <span class="material-symbols-rounded cross">
                         close
                     </span>
@@ -60,8 +40,6 @@
 
         {% endfor %}
     </div>
-
->>>>>>> 87230bd221727db970d3d906dc210736d8e2985d
 </div>
 
 
