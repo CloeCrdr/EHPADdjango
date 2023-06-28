@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.views import View
 
 from django.core.mail import EmailMessage
-from .forms import ContactForm
+from .forms import ContactForm, ServiceForm
 from .models import Contact, Service
 
 
@@ -56,4 +56,27 @@ def delete_service(request,id):
         service = Service.objects.get(id=id)
         service.delete()   
     return redirect('LiveApp:admin_ehpad')
+
+def create_service(request):
+    if request.method == 'POST':
+        form = ServiceForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            return redirect('LiveApp:admin_ehpad')
+    else:
+        form = ServiceForm()
+    return render(request, 'LiveApp/admin/service_create.html', {'form' :form})
     
+def update_service(request, id):
+    service = Service.objects.get(id=id)
+    if request.method == 'POST':
+        form = ServiceForm(request.POST, instance=service)
+        if form.is_valid():
+            form.save()
+            return redirect('LiveApp:admin_ehpad')
+    
+    else:
+        form = ServiceForm(instance=service)
+
+    return render(request, 'LiveApp/admin/service_update.html', {'form': form, 'service': service})

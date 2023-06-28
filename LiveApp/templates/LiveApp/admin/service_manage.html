@@ -6,7 +6,7 @@
 
 <div class="container">
     <h3>Gestion des services de l'EHPAD</h3>
-    <a href="" class="add">
+    <a href="{% url 'LiveApp:create_service' %}" class="add">
         <span class="material-symbols-rounded">
             add
         </span>
@@ -25,7 +25,7 @@
                 {{ service.name }}
             </div>
             <div class="management">
-                <a href="">
+                <a href="{% url 'LiveApp:update_service' service.id %}">
                     <span class="material-symbols-rounded update">
                         edit
                     </span>
@@ -40,7 +40,6 @@
 
         {% endfor %}
     </div>
-
 </div>
 
 
