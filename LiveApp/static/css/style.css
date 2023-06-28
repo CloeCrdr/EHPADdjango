@@ -259,6 +259,42 @@ section p {
     display: block;
 }
 
+.management {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 10;
+}
+
+.management a, .add  { color: white !important;}
+.management span, .add {
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 15px;
+    box-shadow: 1px 1px 2px black;
+    margin : 0 3px 0 3px
+}
+
+.add{
+    border-radius: 20px;
+    background-color: rgb(89, 139, 88);
+    padding: 8px 15px 8px 15px;
+    position: relative;
+    right: 8rem;
+    left: 75%;
+}
+
+.add span {
+    vertical-align: top;
+}
+
+.management span.update {
+    background-color: rgb(192, 152, 96);
+}
+
+.management span.cross {
+    background-color: rgb(204, 28, 28);
+}
 
 /** FORMULAIRES **/
 

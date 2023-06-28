@@ -48,4 +48,5 @@ def success(request):
     return render(request, 'LiveApp/success.html') 
 
 def admin(request):
-    return render(request, 'LiveApp/admin/service_manage.html') 
+    services = Service.objects.all()
+    return render(request, 'LiveApp/admin/service_manage.html', {'services': services}) 
