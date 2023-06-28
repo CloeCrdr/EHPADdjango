@@ -6,6 +6,23 @@
 
 <div class="container">
     <h3>Page Admin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Nom</th><th>Description</th><th>Actif</th><th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for service in services %}
+            <tr>
+                <th>{{service.name}}</th>
+                <th>{{service.description}}</th>
+                <th>{{service.is_active}}</th>
+                <th><a>Editer</a>/<a href="{% url 'LiveApp:delete_service' service.id %}" >Supprimer</a>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
 
 

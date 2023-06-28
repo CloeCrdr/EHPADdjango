@@ -11,6 +11,6 @@ class Contact(models.Model):
     id = models.AutoField(primary_key=True)
     lastname = models.CharField(max_length=100)
     firstname = models.CharField(max_length=100)
-    email = models.EmailField(("email address"), unique=True)
+    email = models.EmailField(("email address"), unique=False)
     subject = models.CharField(max_length=100)
     message = models.TextField()

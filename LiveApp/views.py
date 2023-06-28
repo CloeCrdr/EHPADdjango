@@ -48,4 +48,12 @@ def success(request):
     return render(request, 'LiveApp/success.html') 
 
 def admin(request):
-    return render(request, 'LiveApp/admin/service_manage.html') 
+    services = Service.objects.all()
+    return render(request, 'LiveApp/admin/service_manage.html', {'services': services}) 
+
+def delete_service(request,id):
+    if request.method == "GET":
+        service = Service.objects.get(id=id)
+        service.delete()   
+    return redirect('LiveApp:admin_ehpad')
+    

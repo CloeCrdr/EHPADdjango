@@ -12,5 +12,7 @@ urlpatterns = [
     path('services/', views.services, name='services'),
     path('a-propos/', views.about, name='about'),
     path('success/', views.success, name='success'),
+
     path('admin_ehpad/', views.admin, name='admin_ehpad'),
+    path('admin_ehpad/delete/<int:id>', views.delete_service, name='delete_service'),
 ]
