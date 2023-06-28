@@ -5,6 +5,7 @@
 {% block content %}
 
 <div class="container">
+<<<<<<< HEAD
     <h3>Page Admin</h3>
     <table>
         <thead>
@@ -23,6 +24,44 @@
             {% endfor %}
         </tbody>
     </table>
+=======
+    <h3>Gestion des services de l'EHPAD</h3>
+    <a href="" class="add">
+        <span class="material-symbols-rounded">
+            add
+        </span>
+        Nouveau service
+    </a>
+    <div class="cards">
+        {% for service in services %}
+        <div class="card">
+            <div class="card-background"></div>
+            <div class="card-content">
+                <div class="card-description">
+                    {{ service.description }}
+                </div>
+            </div>
+            <div class="card-footer has-background-white-bis">
+                {{ service.name }}
+            </div>
+            <div class="management">
+                <a href="">
+                    <span class="material-symbols-rounded update">
+                        edit
+                    </span>
+                </a>   
+                <a href="">
+                    <span class="material-symbols-rounded cross">
+                        close
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+
+>>>>>>> 87230bd221727db970d3d906dc210736d8e2985d
 </div>
 
 
