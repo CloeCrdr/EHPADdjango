@@ -5,6 +5,10 @@ body {
     background-attachment: fixed;
 }
 
+body a {
+    text-decoration: none;
+    color: #926947;
+}
 .container {
     width: 100% !important;
     max-width: 100% !important;
@@ -310,6 +314,7 @@ footer {
 footer div h4 {
     font-weight: bold;
     font-size: 16px;
+    color: #90592c;
 }
 
 footer div.separator {
