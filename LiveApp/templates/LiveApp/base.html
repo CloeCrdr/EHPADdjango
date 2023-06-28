@@ -19,8 +19,8 @@
         <div class="infos">Nous contacter : 04 00 00 00 00</div>
         <div class="nav">
             <a {% if request.path == '/' %}class="active"{% endif %} href="{% url "LiveApp:home" %}">Accueil</a>
-            <a {% if request.path == '/services/' %}class="active"{% endif %} href="/services/">Nos services</a>
-            <a {% if request.path == '/a-propos/' %}class="active"{% endif %} href="/a-propos/">À propos</a>
+            <a {% if request.path == '/services/' %}class="active"{% endif %} href="{% url "LiveApp:services" %}">Nos services</a>
+            <a {% if request.path == '/a-propos/' %}class="active"{% endif %} href="{% url "LiveApp:about" %}">À propos</a>
             <a {% if request.path == '/contact/' %}class="active"{% endif %} href="{% url "LiveApp:contact" %}">Contact</a>
         </div>
     </nav>
@@ -35,6 +35,14 @@
       <p>Chemin du temps<br />
         7 rue de la Semaine<br/>
         00000 Toute la France</p>
+    </div>
+    <div class="separator"><br/></div>
+    <div>
+      <a href="">Nos services</a><br/>
+      <a href="">Nous contacter</a><br/>
+      <a href="">À propos</a><br/>
+      ehpad@reposguerriers.com<br/>
+      04 00 00 00 00
     </div>
   </footer>
 </body>

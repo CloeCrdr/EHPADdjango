@@ -8,6 +8,7 @@ body {
 .container {
     width: 100%!important;
     max-width: 100%!important;
+    min-height: 50vh !important;
     max-height: 100%!important;
     height: 100%!important;
     margin-top: 8.6rem;
@@ -138,4 +139,21 @@ section  p {
 }
 
 footer {
+    background-color: white;
+    padding: 7rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer div h4 {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+footer div.separator {
+    border-left: 1px solid lightgrey;
+    height: 40%;
+    min-height: 100px;
+    width: 2px;
 }
