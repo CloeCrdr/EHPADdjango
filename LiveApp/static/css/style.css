@@ -61,7 +61,11 @@ section {
     align-items: center;
     position: relative;
 }
-
+h3 {
+    font-size: 35px;
+    text-align: center;
+    padding-top: 2rem;
+}
 section h2 {
     font-size: 40px;
     margin-bottom: 30px;
@@ -137,6 +141,44 @@ section  p {
     margin: auto;
     background-attachment: fixed;
 }
+
+/** FORMULAIRES **/
+
+form {
+    width: 65%;
+    text-align: center;
+    margin: 0.5rem auto;
+}
+
+form label {
+    display: block;
+    width: 400px;
+    margin: auto;
+    text-align: left;
+    padding-top: 1rem;
+    font-weight: bold;
+    color: #75a2b8;
+}
+
+form input[type="text"], form input[type="email"], form textarea{
+    width: 400px;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.9);
+    /*border: 1px solid #75a2b8;*/
+    border: none;
+}
+
+form button {
+    width: 200px; 
+    padding: 10px; 
+    background-color: #75a2b8;
+    outline: none;
+    border: none;
+    margin: 1rem;
+    color: white;
+}
+
+/** FOOTER **/
 
 footer {
     background-color: white;
