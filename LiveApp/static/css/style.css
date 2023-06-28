@@ -6,11 +6,11 @@ body {
 }
 
 .container {
-    width: 100%!important;
-    max-width: 100%!important;
+    width: 100% !important;
+    max-width: 100% !important;
     min-height: 50vh !important;
-    max-height: 100%!important;
-    height: 100%!important;
+    max-height: 100% !important;
+    height: 100% !important;
     margin-top: 8.6rem;
 }
 
@@ -21,6 +21,7 @@ header {
     width: 100%;
     z-index: 99;
 }
+
 header nav .infos {
     background-color: white;
     text-align: center;
@@ -37,21 +38,20 @@ header nav .nav {
 }
 
 header nav .nav a {
-    padding: 10px 20px 10px 20px; 
+    padding: 10px 20px 10px 20px;
     color: white;
     text-transform: uppercase;
 }
 
 .nav a.active {
     text-decoration: underline;
-    font-weight: bold; 
+    font-weight: bold;
     color: black
 }
 
- 
-main {
-    
-}
+
+main {}
+
 section {
     text-align: center;
     width: 100%;
@@ -61,21 +61,30 @@ section {
     align-items: center;
     position: relative;
 }
+
 h3 {
     font-size: 35px;
     text-align: center;
     padding-top: 2rem;
 }
+
 section h2 {
     font-size: 40px;
     margin-bottom: 30px;
 }
-section  p {
+
+section p {
     font-size: 20px;
     line-height: 1.5;
     margin-bottom: 50px;
 }
-#section1, #section2, #section3 {
+
+#section1,
+#section2,
+#section3,
+#section4,
+#section5,
+#section6 {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -86,36 +95,35 @@ section  p {
     justify-content: center;
     text-align: center
 }
+
 #section1 {
-    background-image : url('../images/section1.jpeg');
+    background-image: url('../images/section_1.jpg');
 }
 
 #section2 {
-    background-image: url('../images/section2.jpeg'); 
+    background-image: url('../images/section_2.jpg');
 }
 
 #section3 {
-    background-image: url('../images/section3.jpg');
+    background-image: url('../images/section_3.jpg');
 }
 
 #section4 {
-    background-image: url('../images/section4.jpg'); 
-    background-position: center bottom;
+    background-image: url('../images/section_4.jpg');
 }
 
 #section5 {
-    background-image: url('../images/section5.jpg');
+    background-image: url('../images/section_5.jpg');
     background-position: center top;
-    background-size: contain;
 }
 
 #section6 {
-    background-image: url('../images/section6.jpg');
+    background-image: url('../images/section_6.jpg');
     background-position: center center;
 }
 
 .titre {
-    font-size: 25px; 
+    font-size: 25px;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: white;
@@ -134,13 +142,119 @@ section  p {
     font-size: 25px;
 }
 
-.cadre_info {
-    background-color: rgba(255,255,255,0.9);
+.cadre_info,
+.cadre_info_bis {
+    background-color: rgba(255, 255, 255, 0.9);
     max-width: 400px;
     padding: 5rem;
     margin: auto;
     background-attachment: fixed;
 }
+
+.cadre_info_bis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    padding: 3rem !important;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.cadre_info_bis p {
+    margin-top: 1.5rem;
+}
+
+/** CARDS SERVICE **/
+/* cards flex */
+.cards {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+
+}
+
+/* card events */
+.card {
+    width: 20% !important;
+    min-width: 195px;
+    margin: 2%;
+    height: 20rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    color: white;
+    filter: brightness(0.8);
+}
+
+.card:nth-child(5n-4) {
+    background-image: url('../images/section_1.jpg');
+    background-position: top left;
+}
+
+.card:nth-child(5n-3) {
+    background-image: url('../images/section_1.jpg');
+    background-position: bottom right;
+}
+
+.card:nth-child(5n-2) {
+    background-image: url('../images/section_1.jpg');
+    background-position: center left;
+}
+
+.card:nth-child(5n-1) {
+    background-image: url('../images/section_1.jpg');
+    background-position: center center;
+}
+
+.card:nth-child(5n-1) {
+    background-image: url('../images/section_1.jpg');
+    background-position: center right;
+}
+
+.card:nth-child(5n) {
+    background-image: url('../images/section_1.jpg');
+    background-position: top right;
+}
+
+.card-background {
+    height: 20rem;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: 50%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    height: 20rem;
+}
+
+.card-description {
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    hyphens: auto;
+    height: 12rem;
+    margin-top: 0.8rem;
+}
+
+.card-footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding:10px;
+    color: black;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+}
+
 
 /** FORMULAIRES **/
 
@@ -160,17 +274,19 @@ form label {
     color: #75a2b8;
 }
 
-form input[type="text"], form input[type="email"], form textarea{
+form input[type="text"],
+form input[type="email"],
+form textarea {
     width: 400px;
     padding: 10px;
-    background-color: rgba(255,255,255,0.9);
+    background-color: rgba(255, 255, 255, 0.9);
     /*border: 1px solid #75a2b8;*/
     border: none;
 }
 
 form button {
-    width: 200px; 
-    padding: 10px; 
+    width: 200px;
+    padding: 10px;
     background-color: #75a2b8;
     outline: none;
     border: none;
