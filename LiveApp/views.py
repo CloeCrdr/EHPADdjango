@@ -11,6 +11,7 @@ from .models import Contact, Service
 def home(request):
     return render(request, "LiveApp/home.html")
 
+
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
