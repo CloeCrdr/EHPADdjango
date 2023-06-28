@@ -232,10 +232,13 @@ section p {
     z-index: 2;
     height: 20rem;
 }
-
+.card-description::-webkit-scrollbar {
+    display: none;
+  }
 .card-description {
     text-align: justify;
-    overflow: hidden;
+    overflow: auto;
+    scrollbar-width: none;  
     text-overflow: ellipsis;
     word-wrap: break-word;
     hyphens: auto;
