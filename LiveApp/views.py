@@ -46,3 +46,6 @@ def services(request):
 
 def success(request):
     return render(request, 'LiveApp/success.html') 
+
+def admin(request):
+    return render(request, 'LiveApp/admin/service_manage.html') 
