@@ -87,11 +87,11 @@ DATABASES = {
     'default': {
         # 'ENGINE': 'django.db.backends.mysql-connector-python',
         'ENGINE': 'mysql.connector.django',
-        'HOST': os.getenv("DATABASE_HOST"),
-        'PORT': os.getenv("DATABASE_PORT"),
-        'NAME': os.getenv("DATABASE_NAME"),
-        'USER': os.getenv("DATABASE_USER"),
-        'PASSWORD': os.getenv("DATABASE_PASS"),
+        'HOST': "localhost",
+        'PORT': 3306,
+        'NAME': "ehpaddjango",
+        'USER': "root",
+        'PASSWORD': "root",
     }
 }
 
