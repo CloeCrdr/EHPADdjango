@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-q4l!018^t&8!qil^wz1lvpzrwj_plg#d3hu8_&)=&oonajn474'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['vps-3a96c831.vps.ovh.net','51.75.124.10']
 
@@ -130,7 +130,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR,"EHPADdjango/static/")
+# STATIC_ROOT = os.path.join(BASE_DIR,"EHPADdjango/static/")
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
