@@ -26,7 +26,7 @@ def contact(request):
             # Envoi de l'e-mail
             subject = f'Nouveau message de contact: {subject}'
             body = f'Nom: {lastname} {firstname}, \nAdresse e-mail: {email}\nMessage: {message}'
-            to_email = 'admin@ehpadexample.com'  # Adresse e-mail de l'administrateur du site
+            to_email = 'adouken972@hotmail.fr'  # Adresse e-mail de l'administrateur du site
             email_message = EmailMessage(subject, body, to=[to_email])
             email_message.send()
             
